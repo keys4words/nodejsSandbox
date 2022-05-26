@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  js:
+    image: node:18-alpine3.14
+    user: node
+    working_dir: /home/node/app
+    # environment:
+      # - NODE_ENV=production
+    volumes:
+      - ./code:/home/node/app
+    entrypoint: /bin/sh
