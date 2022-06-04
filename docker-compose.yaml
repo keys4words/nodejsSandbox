@@ -5,8 +5,9 @@ services:
     image: node:18-alpine3.14
     user: node
     working_dir: /home/node/app
-    # environment:
-      # - NODE_ENV=production
+    ports:
+      - 3000:3000
     volumes:
       - ./code:/home/node/app
-    entrypoint: /bin/sh
+    # entrypoint: /bin/sh
+    command: node basics/web/server.js
