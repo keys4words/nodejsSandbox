@@ -10,4 +10,5 @@ services:
     volumes:
       - ./code:/home/node/app
     # entrypoint: /bin/sh
-    command: node basics/web/json-server.js
+    # command: node basics/web/json-server.js
+    command: node ds/server.js
